@@ -1,0 +1,5 @@
+NFT: EcoMint ECM
+0x4e861724b9335f5994fa31356c5b9abd41d3a4ea
+
+Token: EcoMintToken ECMT
+0x5fb935a3bba75d84b56884bbe10f1a5822bf38f9

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@vechain/connex@2"></script>
+    <title>Vite App</title>
+  </head>
+  <style>
+    body {
+        background: #222D32;
+        font-family: 'Roboto', sans-serif;
+    }
+    .s{
+        margin-left:525px;
+    }
+    #xm{margin:auto}
+    </style>
+  <body>
+    <img src="EcoMint-removebg-preview.png" class="s"><!--<p class="text-3x1 mt-8 text-center text-green-500">My Storage Dapp</p>-->
+    <div class="flex mt-8 items-center justify-center" id="login-body">
+      <button class="py-2 px-4 rounded bg-blue-400 text-white hover:bg-blue-500 transition duration-500" id="login-btn">Login</button>
+    </div>
+    <div class="hidden" id="dapp-body">
+      <div class="flex justify-center my-8">User address : <span id="user-address"></span></div>
+      <div class="flex justify-between max-w-screen-sm mx-auto space-x-4">
+        <div class="flex flex-col items-center space-y-4 bg-green-400 text-white p-8 rounded-lg w-1/2" id="xm">
+          <p class="text-xl font-semibold">Token Amount to be added</p>
+          <input class="border border-gray-200 focus:outline-none p-2 rounded text-center text-black" placeholder="add number" id="store-input">
+          <button class="px-2 py-1 rounded bg-blue-400 hover:bg-blue-500 text-white" id="store-btn">store</button>
+      </div>
+      <!--<div class="flex flex-col items-center space-y-4 bg-emerald-300 p-8 rounded-lg w-1/2">
+        <p class="text-xl font-semibold">Read</p>
+        <button class="px-2 py-1 rounded bg-blue-400 hover:bg-blue-500 text-white" id="read-btn">read</button>
+        <div> The stored number is : <span class="font-semibold" id="contract-number"></span></div>
+      </div>-->
+    </div>
+    <div class="col-lg-6 login-btm login-button">
+        <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+<!--<title>Login Page</title>
+    <style>
+        body {
+            background: #222D32;
+            font-family: 'Roboto', sans-serif;
+        }
+
+       .s{
+        margin-top:40px;
+        width: 200px;
+        height: 200px;
+       }
+
+        .login-box {
+            margin-top: 150px;
+            height: auto;
+            background: #1A2226;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+            margin-left: 350px;
+            margin-right: 350px;
+            padding-bottom: 10%;
+        }
+
+        .login-title {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ECF0F5;
+        }
+
+        .login-form {
+            text-align: center;
+        }
+
+        input[type=text] {
+            background-color: #1A2226;
+            border: none;
+            border-bottom: 2px solid #0DB8DE;
+            border-top: 0px;
+            border-radius: 0px;
+            font-weight: bold;
+            outline: 0;
+            margin-bottom: 20px;
+            padding-left: 0px;
+            color: #ECF0F5;
+        }
+
+        input[type=password] {
+            background-color: #1A2226;
+            border: none;
+            border-bottom: 2px solid #0DB8DE;
+            border-top: 0px;
+            border-radius: 0px;
+            font-weight: bold;
+            outline: 0;
+            padding-left: 0px;
+            margin-bottom: 20px;
+            color: #ECF0F5;
+        }
+
+        .form-group {
+            margin-bottom: 40px;
+            outline: 0px;
+        }
+
+        .form-control:focus {
+            border-color: inherit;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-bottom: 2px solid #0DB8DE;
+            outline: 0;
+            background-color: #1A2226;
+            color: #ECF0F5;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0;
+        }
+
+        label {
+            margin-bottom: 0px;
+        }
+
+        .form-control-label {
+            font-size: 10px;
+            color: #6C6C6C;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline-primary {
+            border-color: #0DB8DE;
+            color: #0DB8DE;
+            border-radius: 0px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0DB8DE;
+            right: 0px;
+        }
+
+        .login-btm {
+            float: left;
+        }
+
+        .btn-outline-primary {
+
+            text-align: center;
+            margin-Left: 375px;
+        }
+
+        .login-text {
+            text-align: left;
+            padding-left: 0px;
+            color: #A2A4A4;
+        }
+
+        .loginbttm {
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <img src="C:\Users\tirth\OneDrive\Desktop\EcoMint\EcoMint-removebg-preview.png" class="s">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    <img src="">
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label">USERNAME</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                                <input type="password" class="form-control" i>
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                     Error Message 
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+-->
